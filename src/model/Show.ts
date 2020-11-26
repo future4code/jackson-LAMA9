@@ -18,31 +18,32 @@ export class EventShow{
                 break;
             default:
                 this.weekDay = ShowWeekDayType.DOMINGO
-
         }
+        this.startTime = moment(this.startTime)
+        this.endTime = moment(this.endTime)
 
     }
 
     getId() {return this.id}
-    setId(id:string) {this.id = id }
+    setId(id: string) {this.id = id }
 
     getWeekDay() {return this.weekDay}
-    setWeekDay(weekDay:string) {this.weekDay = weekDay }
+    setWeekDay(weekDay: ShowWeekDayType ) {this.weekDay = weekDay }
 
-    getStartTime() {return this.__}
-    set__(__:__) {this.___ = ___}
+    getStartTime() {return this.startTime }
+    setStartTime(startTime: Moment) {this.startTime = startTime}
 
-    get__() {return this.__}
-    set__(__:__) {this.___ = ___}
+    getEndTime() {return this.endTime}
+    setEndTime(endTime: Moment) {this.endTime = endTime }
 
-    get__() {return this.__}
-    set__(__:__) {this.___ = ___}
+    getIdBand() {return this.idBand}
+    setIdBand(idBand: string) {this.idBand = idBand }
 }
 
 export enum ShowWeekDayType {
     SEXTA = "Sexta",
-    SABADO = "Sabado"
-    DOMINGO = "Domingo"
+    SABADO = "Sabado",
+    DOMINGO = "Domingo",
 
 }
 
@@ -54,7 +55,14 @@ export class CreateShowInputDTO{
 
     constructor(
         weekDay: string,
-
-    )
+        startTime: string = moment().format("hh:mm"),
+        endTime: string = moment().format("hh:mm"),
+        idBand: string,
+    ){
+      this.weekDay = weekDay;
+      this.startTime = startTime;  
+      this.endTime = endTime;
+      this.idBand = idBand;
+    }
 
 }

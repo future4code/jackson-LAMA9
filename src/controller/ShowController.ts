@@ -7,9 +7,10 @@ export class ShowController{
         req: Request,
         res: Response
     ){
-        try(
-            
-        )
+        try{
+            const idBand = req.headers.band;
+            const dateShow = req.headers
+        }
 
     }
 }
