@@ -14,12 +14,12 @@ export class UserBusiness {
       private userDatabase:UserDatabase
    ){}
 
-   public async signup(
+   public  signup = async (
       name: string,
       email: string,
       password: string,
       role: string
-   ) {
+   ) => {
       try {
          if (!name || !email || !password || !role) {
             throw new CustomError(422, "Missing input");
@@ -57,7 +57,7 @@ export class UserBusiness {
 
    }
 
-   public async login(email: string, password: string) {
+   public  login = async(email: string, password: string) =>{
 
       try {
          if (!email || !password) {
