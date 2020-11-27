@@ -1,25 +1,19 @@
-import dotenv from "dotenv";
-import {AddressInfo} from "net";
 import express from "express";
-import { userRouter } from "./routes/userRouter";
-import { bandRouter } from "./routes/bandRouter";
-//import { createTables } from "./mySQL"
+import {AddressInfo} from "net";
+import { userRouter } from "./router/UserRouter";
 
-dotenv.config();
 const app = express();
-
-//createTables()
 
 app.use(express.json());
 
-app.use("/user", userRouter);
-app.use("/band", bandRouter);
+app.use("/users", userRouter);
 
-const server = app.listen(3000, () => {
-    if (server) {
-      const address = server.address() as AddressInfo;
-      console.log(`Servidor rodando em http://localhost:${address.port}`);
-    } else {
-      console.error(`Falha ao rodar o servidor.`);
-    }
-  });
+const server = app.listen(3003, () => {
+  
+  if (server) {
+    const address = server.address() as AddressInfo;
+    console.log(`Servidor rodando em http://localhost:${address.port}`);
+  } else {
+    console.error(`Falha ao rodar o servidor.`);
+  }
+});

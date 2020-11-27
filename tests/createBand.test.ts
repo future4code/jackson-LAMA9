@@ -27,6 +27,7 @@ describe("Create Band", () => {
            
          )
       } catch (error) {
+         console.log(error)
          expect(error.statusCode).toBe(422)
          expect(error.message).toBe("Missing input")
       }
@@ -61,6 +62,7 @@ describe("Create Band", () => {
            }      
          )
       } catch (error) {
+         console.log(error)
          expect(error.statusCode).toBe(422)
          expect(error.message).toBe("Missing input")
       }
