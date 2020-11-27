@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/users", userRouter);
+//app.use("/band", bandRouter);
 
 const server = app.listen(3003, () => {
   

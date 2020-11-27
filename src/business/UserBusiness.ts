@@ -1,9 +1,9 @@
 import { CustomError } from "../errors/CustomError";
 import { User, stringToUserRole } from "../model/User";
-import  { UserDatabase } from "../data/UserDatabase";
-import  { HashGenerator } from "../services/hashGenerator";
-import  { IdGenerator } from "../services/idGenerator";
-import  { TokenGenerator } from "../services/tokenGenerator";
+import userDatabase, { UserDatabase } from "../data/UserDatabase";
+import hashGenerator, { HashGenerator } from "../services/hashGenerator";
+import idGenerator, { IdGenerator } from "../services/idGenerator";
+import tokenGenerator, { TokenGenerator } from "../services/tokenGenerator";
 
 export class UserBusiness {
 
@@ -91,3 +91,9 @@ export class UserBusiness {
    }
 }
 
+export default new UserBusiness(
+   idGenerator,
+   hashGenerator,
+   tokenGenerator,
+   userDatabase
+)
