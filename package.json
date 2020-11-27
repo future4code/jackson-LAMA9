@@ -4,8 +4,9 @@
   "description": "Template para o projeto LAMA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && jest",
-    "start": "ts-node ./src/index.ts",
+    "test": "clear && echo \"Running tests...\" && jest",
+    "start": "tsc && node --inspect ./build/src/index.js",
+    "dev": " ts-node-dev ./src/index.ts",
     "table": "ts-node ./src/mySQL.ts"
   },
   "keywords": [
@@ -26,6 +27,7 @@
     "express": "^4.17.1",
     "jest": "^26.0.1",
     "jsonwebtoken": "^8.5.1",
+    "ts-node-dev": "^1.0.0-pre.44",
     "knex": "^0.21.2",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",

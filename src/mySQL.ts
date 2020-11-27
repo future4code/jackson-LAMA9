@@ -1,13 +1,13 @@
-import { BaseDatabase } from "./data/BaseDatabase";
+import BaseDataBase from "./data/BaseDatabase";
 
 
-export class CreateDatabase extends BaseDatabase {
+export class CreateDatabase extends BaseDataBase {
 
   public async createTable(
     
   ): Promise<void> {
     try {
-      await this.getConnection()
+      await BaseDataBase.connection
       .raw(`
       CREATE TABLE IF NOT EXISTS band_lama (
         id VARCHAR(255) PRIMARY KEY,
@@ -16,7 +16,7 @@ export class CreateDatabase extends BaseDatabase {
         responsible VARCHAR(255) UNIQUE NOT NULL 
       )
       `)
-      await this.getConnection()
+      await BaseDataBase.connection
       .raw(`
       CREATE TABLE IF NOT EXISTS show_lama (
         id VARCHAR(255) PRIMARY KEY,
@@ -26,9 +26,9 @@ export class CreateDatabase extends BaseDatabase {
         band_id VARCHAR(255) NOT NULL,
         FOREIGN KEY(band_id) REFERENCES band_lama(id)
       )
-      )
+      
       `)
-      await this.getConnection()
+      await BaseDataBase.connection
       .raw(`
       CREATE TABLE IF NOT EXISTS users_lama (
         id VARCHAR(255) PRIMARY KEY,
