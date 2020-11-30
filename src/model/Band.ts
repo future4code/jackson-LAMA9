@@ -1,4 +1,9 @@
-import { CustomError } from "../errors/CustomError";
+export interface BandInputDTO{
+  name: string;
+  music_genre: string;
+  responsible: string;
+  
+}
 
 export class Band {
   constructor(
@@ -17,14 +22,34 @@ export class Band {
     return this.name;
   }
 
-  public getEmail(): string {
+  public getMusic_genre(): string {
     return this.music_genre;
   }
 
-  public getPassword(): string {
+  public getResponsible(): string {
     return this.responsible;
   }
 
   
+
+  public setName(): string {
+    return this.name = name;
+  }
+
+  public setMusic_genre(): string {
+    return this.music_genre = this.music_genre;
+  }
+  public setResposible(): string {
+    return this.responsible = this.responsible;
+  }
+  
+  public static toBand(data?: any): Band | undefined {
+    return (data && new Band(
+      data.id,
+      data.name,
+      data.music_genre, 
+      data.responsible
+    ))
+  }
 }
 

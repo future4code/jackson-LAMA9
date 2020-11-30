@@ -12,8 +12,7 @@ export class BandDatabase extends BaseDataBase {
             dbModel.id,
             dbModel.name,
             dbModel.music_genre,
-            dbModel.responsible
-            
+            dbModel.responsible            
          )
       );
    }
@@ -25,8 +24,8 @@ export class BandDatabase extends BaseDataBase {
             VALUES (
             '${band.getId()}', 
             '${band.getName()}', 
-            '${band.getEmail()}',
-            '${band.getPassword()}' 
+            '${band.getMusic_genre()}',
+            '${band.getResponsible()}' 
             
             )`
          );

@@ -1,5 +1,6 @@
 import express from "express";
 import {AddressInfo} from "net";
+import { bandRouter } from "./router/BandRouter";
 import { userRouter } from "./router/UserRouter";
 
 const app = express();
@@ -7,7 +8,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/users", userRouter);
-//app.use("/band", bandRouter);
+app.use("/band", bandRouter);
 
 const server = app.listen(3003, () => {
   
