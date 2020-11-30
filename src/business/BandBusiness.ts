@@ -18,6 +18,13 @@ export class BandBusiness {
     token: string
    )=> {
       try {
+
+         const tokenData = this.tokenGenerator.getData(token);
+
+         if(tokenData.role !== UserRole.ADMIN){
+             throw new Error('Invalid authentication, only ADMIN')
+         }
+          
          if (!band.name || !band.music_genre || !band.responsible ) {
             throw new CustomError(422, "Missing input");
          }
@@ -25,11 +32,6 @@ export class BandBusiness {
          
          const id = this.idGenerator.generate();
 
-         const tokenData = this.tokenGenerator.getData(token);
-         
-        if(tokenData.role !== UserRole.ADMIN){
-            throw new Error('Invalid authentication, only ADMIN')
-        }
          
 
          await this.bandDatabase.createBand(

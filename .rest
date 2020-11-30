@@ -24,10 +24,10 @@ Content-Type: application/json
 
 POST http://localhost:3003/band/createBand
 Content-Type: application/json
-authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYjYzYjcyLTEyYjEtNGY0OS1iYWUxLTE4MzMxNDEwY2E4ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYwNjc3MjMwMywiZXhwIjoxNjA2ODMyMzAzfQ.MZKXS7mR3_gYk7gOgK9o1lFGMymkj-_PqNoFuimEXjk
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYjYzYjcyLTEyYjEtNGY0OS1iYWUxLTE4MzMxNDEwY2E4ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYwNjc3MjMwMywiZXhwIjoxNjA2ODMyMzAzfQ.MZKXS7mR3_gYk7gOgK9o1lFGMymkj-_PqNoFuimEXjk
 
 {
-	"name": "Scorpions",
+	"name": "Scorpions1",
 	"music_genre": "Rock",
-	"responsible": "João"
+	"responsible": "João4"
 }
