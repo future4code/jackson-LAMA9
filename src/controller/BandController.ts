@@ -28,6 +28,7 @@ export class BandController {
          const { statusCode, message } = error
          res.status(statusCode || 400).send({ message });
       }
+      
       await BaseDatabase.destroyConnection();
    }
 

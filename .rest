@@ -24,7 +24,7 @@ Content-Type: application/json
 
 POST http://localhost:3003/band/createBand
 Content-Type: application/json
-Authorization: token "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYjYzYjcyLTEyYjEtNGY0OS1iYWUxLTE4MzMxNDEwY2E4ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYwNjY3MDMxNiwiZXhwIjoxNjA2NzQyMzE2fQ.BCPP9h1OZaApWFi0kjr5GM8sdH5BUnzoVi4trw_-U-4"
+authorization: token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJmYjYzYjcyLTEyYjEtNGY0OS1iYWUxLTE4MzMxNDEwY2E4ZCIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTYwNjc3MjMwMywiZXhwIjoxNjA2ODMyMzAzfQ.MZKXS7mR3_gYk7gOgK9o1lFGMymkj-_PqNoFuimEXjk
 
 {
 	"name": "Scorpions",
